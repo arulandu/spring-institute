@@ -15,7 +15,7 @@ const Home: NextPage<any> = ({ officers }) => {
         <main className='relative w-full min-h-screen bg-transparent'>
           <div className="h-screen flex flex-col justify-center items-center">
             <h1 className="text-white text-center text-6xl font-black">Your voice matters.</h1>
-            <Button name="Get involved ->" className="mt-6"/>
+            <Button name="Get involved ->" className="mt-6" link="mailto:springintoactiongroup@gmail.com"/>
           </div>
 
           <Footer/>

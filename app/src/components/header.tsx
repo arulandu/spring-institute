@@ -62,7 +62,7 @@ const NavBar = () => {
         <NavLink index={1} href="/about" name="About" disabled/>
         <NavLink index={2} href="/resources" name="Resources" disabled/>
         <NavLink index={3} href="/calendar" name="Calendar" disabled/>
-        <Link href="mailto:vmtofficers@gmail.com" passHref>
+        <Link href="mailto:springintoactiongroup@gmail.com" passHref>
           <a className='mt-4 md:ml-4 md:mt-0'>
             <OutlineButton name="Contact" />
           </a>
