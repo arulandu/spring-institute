@@ -6,10 +6,10 @@ import { Router, useRouter } from 'next/router';
 import { useSession } from './SessionProvider';
 import { ToastAction, useToasts } from './ToastProvider';
 
-const NavLink = ({ index, href, name, onClick = () => { } }) => {
+const NavLink = ({ index, href, name, disabled=false, onClick = () => { } }) => {
   return (
-    <Link href={href} passHref>
-      <a className='mb-2 md:mx-4 md:mb-0 text-white hover:text-pink text-md transition-all' onClick={onClick}><span className='text-pink'>#{index}. </span>{name}</a>
+    <Link href={disabled ? "" : href} passHref>
+      <a className={` ${disabled ? 'opacity-30' : ''} mb-2 md:mx-4 md:mb-0 text-white hover:text-pink text-md transition-all`} onClick={onClick}><span className='text-pink'>#{index}. </span>{name}</a>
     </Link>
   );
 }
@@ -59,9 +59,9 @@ const NavBar = () => {
         </Link>
       </div>
       <div className={`block w-full md:w-fit h-screen md:h-full z-10 absolute md:relative top-0 ${isOpen ? 'left-0' : 'left-[-200%] md:left-0'} px-4 sm:px-12 md:px-0 flex flex-col md:flex-row items-start md:items-center justify-center bg-navy bg-opacity-90 md:bg-transparent transition-all`}>
-        <NavLink index={1} href="/about" name="About" />
-        <NavLink index={3} href="/resources" name="Resources" />
-        <NavLink index={4} href="/calendar" name="Calendar" />
+        <NavLink index={1} href="/about" name="About" disabled/>
+        <NavLink index={2} href="/resources" name="Resources" disabled/>
+        <NavLink index={3} href="/calendar" name="Calendar" disabled/>
         <Link href="mailto:vmtofficers@gmail.com" passHref>
           <a className='mt-4 md:ml-4 md:mt-0'>
             <OutlineButton name="Contact" />
