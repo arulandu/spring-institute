@@ -9,3 +9,8 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Event {
+  id String @id @default(auto()) @map("_id") @db.ObjectId  
+  name String @unique
+}
