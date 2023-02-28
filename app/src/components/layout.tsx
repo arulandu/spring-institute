@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Head from 'next/head';
+import Header from "./header";
 
 export const Layout: FC<any> = ({ dim=false, children }) => {
     return (
@@ -21,6 +22,7 @@ export const Layout: FC<any> = ({ dim=false, children }) => {
                 <link rel="manifest" href="/site.webmanifest"/>
                 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cf417c"/>
             </Head>
+            <Header/>
 
             {children}
         </>

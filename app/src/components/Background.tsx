@@ -1,36 +1,36 @@
+import Image from "next/image";
 import Particles, { IOptions, RecursivePartial } from "react-tsparticles";
 
-const Background = ({ className }) => {
+const Background = ({ className="" }) => {
   const particleParams: RecursivePartial<IOptions> = {
     "particles": {
       "number": {
-        "value": 70,
+        "value": 60,
         "density": {
           "enable": true,
-          "area": 450
+           "area": 600
         }
       },
       "color": {
-        "value": "#f73e3e"
+        "value": "#ffffff"
       },
       "size": {
-        "value": 30,
+        "value": 25,
         "random": true
       },
       "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 4,
-          "color": "#f73e3e",
-          "opacity": 0.2
-        },
+        "type": "image",
+        "image": {
+          "src": "/images/leaf.png",
+        }
       },
       "opacity": {
-        "random": true
+        "value": 0.9,
+        "random": true,
       },
       "move": {
         "enable": true,
-        "speed": { min: 1, max: 2 },
+        "speed": {min: 1, max: 2},
         "direction": "bottom",
         "straight": false,
         "out_mode": "out",
@@ -85,9 +85,11 @@ const Background = ({ className }) => {
   }
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full bg-navy z-[-1]'>
+    <div className="fixed top-0 left-0 w-full h-full z-[-1] overflow-hidden">
+      <div className="absolute top-0 left-0 z-[-2] w-full h-full bg-[url('/images/bg.png')] blur-sm">
+      </div>
       <Particles
-        className={`w-full h-full ${className}`}
+        className={`w-full h-full opacity-50`}
         options={particleParams}
       />
     </div>

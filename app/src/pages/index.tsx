@@ -5,21 +5,19 @@ import React from "react";
 import { Layout } from "@/components/layout";
 import Background from "@/components/Background"
 import { Footer } from "@/components/footer";
-
+import Button from "@/components/Button";
 
 const Home: NextPage<any> = ({ officers }) => {
   return (
     <Layout>
       <div className='relative w-full m-0 h-screen'>
-        <Background className='opacity-30' />
+        <Background/>
         <main className='relative w-full min-h-screen bg-transparent'>
           <div className="h-screen flex flex-col justify-center items-center">
-            <h1 className="text-white text-3xl font-bold animate-bounce">Spring Institute</h1>
-            {/* <Voter /> */}
+            <h1 className="text-white text-center text-6xl font-black">Your voice matters.</h1>
+            <Button name="Get involved ->" className="mt-6"/>
           </div>
-          <div className="h-screen flex flex-col justify-center items-center">
-            {/* <Graph/> */}
-          </div>
+
           <Footer/>
         </main>
         {/* <InteractiveCanvas /> */}

@@ -17,7 +17,7 @@ body {
 
 /* general */
 body {
-  background-color: #0A1D2F;
+  background-color: #d4979e;
 }
 
 a {
@@ -34,7 +34,7 @@ a {
 }
 
 /* scroll bar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 20px;
 }
 
@@ -55,7 +55,7 @@ a {
 
 ::-webkit-scrollbar-corner {
   background: transparent;
-}
+} */
 
 /* animation */
 @keyframes scale {
