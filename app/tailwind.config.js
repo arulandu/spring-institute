@@ -26,6 +26,9 @@ module.exports = {
         },
         pink: {
           DEFAULT: '#FF6687'
+        },
+        green : {
+          DEFAULT: '#0c2717'
         }
       },
     },

@@ -9,7 +9,7 @@ import { ToastAction, useToasts } from './ToastProvider';
 const NavLink = ({ index, href, name, disabled=false, onClick = () => { } }) => {
   return (
     <Link href={disabled ? "" : href} passHref>
-      <a className={` ${disabled ? 'opacity-30' : ''} mb-2 md:mx-4 md:mb-0 text-white hover:text-pink text-md transition-all`} onClick={onClick}><span className='text-pink'>#{index}. </span>{name}</a>
+      <a className={` ${disabled ? 'opacity-30' : ''} mb-2 md:mx-4 md:mb-0 text-white hover:text-green text-md transition-all`} onClick={onClick}><span className='text-green'>#{index}. </span>{name}</a>
     </Link>
   );
 }
